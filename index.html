@@ -7,47 +7,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
+    <div id="auth-page">
         <!-- Login/Register Page -->
-        <div id="auth-page" class="auth-page">
-            <h2>WhatsApp Clone</h2>
-            <div id="auth-form">
-                <div id="register" class="auth-section">
-                    <h3>Register</h3>
-                    <input type="text" id="register-username" placeholder="Username">
-                    <input type="password" id="register-password" placeholder="Password">
-                    <button onclick="registerUser()">Register</button>
-                    <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
-                </div>
-                <div id="login" class="auth-section" style="display: none;">
-                    <h3>Login</h3>
-                    <input type="text" id="login-username" placeholder="Username">
-                    <input type="password" id="login-password" placeholder="Password">
-                    <button onclick="loginUser()">Login</button>
-                    <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
-                </div>
+        <div class="auth-form">
+            <div id="register-section" class="auth-section">
+                <h2>Register</h2>
+                <input type="text" id="register-username" placeholder="Username">
+                <input type="password" id="register-password" placeholder="Password">
+                <button onclick="registerUser()">Register</button>
+                <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+            </div>
+            <div id="login-section" class="auth-section" style="display: none;">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="loginUser()">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
             </div>
         </div>
+    </div>
 
+    <div id="chat-page" style="display: none;">
         <!-- Chat Page -->
-        <div id="chat-page" class="chat-page" style="display: none;">
-            <div class="sidebar">
-                <div class="user-info">
-                    <h2>Contacts</h2>
-                    <input type="text" id="search-user" placeholder="Search user..." onkeyup="searchUser()">
-                    <ul id="user-list" class="contact-list"></ul>
-                </div>
+        <div class="sidebar">
+            <div class="user-info">
+                <h2>Contacts</h2>
+                <input type="text" id="search-user" placeholder="Search user..." onkeyup="searchUser()">
+                <ul id="user-list" class="contact-list"></ul>
             </div>
-            <div class="chat-area">
-                <div class="chat-header">
-                    <h3 id="chat-with">Select a user to chat</h3>
-                </div>
-                <div class="chat-messages" id="chat-messages">
-                </div>
-                <div class="chat-input">
-                    <input type="text" id="messageInput" placeholder="Type a message...">
-                    <button onclick="sendMessage()">Send</button>
-                </div>
+        </div>
+        <div class="chat-area">
+            <div class="chat-header">
+                <h3 id="chat-with">Select a user to chat</h3>
+            </div>
+            <div class="chat-messages" id="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button onclick="sendMessage()">Send</button>
             </div>
         </div>
     </div>
